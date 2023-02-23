@@ -1,0 +1,13 @@
+{
+    "name": "charles-muojekwu/kafka-queue",
+    "description": "kafaka queue config package",
+    "require": {
+        "laravel/framework": "^10.1"
+    },
+    "authors": [
+        {
+            "name": "charles",
+            "email": "charlesmuojekwu@gmail.com"
+        }
+    ]
+}
