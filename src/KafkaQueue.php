@@ -24,14 +24,14 @@ class KafkaQueue extends Queue implements QueueContract
     public function push($job, $data = '', $queue = null){
         $topic = $this->producer->newTopic($queue ?? env('KAFKA_QUEUE'));
 
-        $n = 0;
-        while($n < 2){
-        $message = readline("write a message:");
+        // $n = 0;
+        // while($n < 2){
+        //$message = readline("write a message:");
         $topic->produce(RD_KAFKA_PARTITION_UA, 0,  serialize($job));
         $this->producer->flush(1000);
 
-        $n++;
-        }
+        // //$n++;
+        // }
     }
 
 
